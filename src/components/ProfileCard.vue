@@ -1,7 +1,7 @@
 <template>
-    <with-dimensions>
+    <width-dimensions>
         <div slot-scope="{ width }" class="profile-card" :class="{ 'profile-card--horizontal': width >= 400 }">
-            <img class="profile-card-image" src="/img/toby.jpg" alt="">
+            <img class="profile-card-image" src="../../static/img/toby.jpg" alt="">
             <div class="profile-card-meta">
                 <div class="mb-4">
                     <p class="text-xl leading-tight">Toby Flenderson</p>
@@ -12,5 +12,14 @@
                 </div>
             </div>
         </div>
-    </with-dimensions>
+    </width-dimensions>
 </template>
+<script>
+import WidthDimensions from "@/components/WidthDimensions.vue";
+export default {
+  name: "ProfileCard",
+  components: {
+    WidthDimensions
+  }
+};
+</script>
